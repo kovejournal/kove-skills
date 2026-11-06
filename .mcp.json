@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "kove": {
+      "type": "http",
+      "url": "https://app.kovejournal.com/mcp"
+    }
+  }
+}

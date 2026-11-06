@@ -1,0 +1,11 @@
+name: An idea for a skill
+description: Something you would like your assistant to do better with Kove.
+labels: [idea]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you would like
+      description: The situation, what you would say, and what a good answer looks like.
+    validations:
+      required: true

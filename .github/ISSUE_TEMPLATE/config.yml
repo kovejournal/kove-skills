@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: My Kove account, my data or billing
+    url: mailto:hello@kovejournal.com
+    about: Write to Kove directly. Please do not post anything from your journal here.
+  - name: A security problem
+    url: https://github.com/kovejournal/kove-skills/security/policy
+    about: Report it privately, never in a public issue.

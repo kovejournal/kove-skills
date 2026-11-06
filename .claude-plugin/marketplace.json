@@ -1,0 +1,41 @@
+{
+  "name": "kove",
+  "owner": {
+    "name": "Kove Journal",
+    "email": "hello@kovejournal.com",
+    "url": "https://kovejournal.com"
+  },
+  "metadata": {
+    "description": "Kove, your private health journal, for Claude Code.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "kove",
+      "source": "./",
+      "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days. Kove looks the food up and does the sums.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Kove Journal",
+        "email": "hello@kovejournal.com",
+        "url": "https://kovejournal.com"
+      },
+      "homepage": "https://kovejournal.com",
+      "repository": "https://github.com/kovejournal/kove-skills",
+      "license": "Apache-2.0",
+      "keywords": [
+        "health",
+        "journal",
+        "nutrition",
+        "calories",
+        "food-log",
+        "training",
+        "workouts",
+        "habits",
+        "mcp",
+        "privacy"
+      ],
+      "category": "productivity"
+    }
+  ]
+}

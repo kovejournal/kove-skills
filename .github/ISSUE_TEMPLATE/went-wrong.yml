@@ -1,0 +1,33 @@
+name: My assistant did something wrong with Kove
+description: A conversation where the assistant logged, read or answered the wrong thing.
+labels: [skill]
+body:
+  - type: markdown
+    attributes:
+      value: Leave out anything from your journal you would rather not share. Figures can be made up, as long as the problem still shows.
+  - type: input
+    id: assistant
+    attributes:
+      label: Assistant and model
+      placeholder: Claude (Sonnet), ChatGPT, Cursor, Grok Bot, ...
+    validations:
+      required: true
+  - type: textarea
+    id: said
+    attributes:
+      label: What you said
+    validations:
+      required: true
+  - type: textarea
+    id: did
+    attributes:
+      label: What the assistant did
+      description: What it answered, and what landed in Kove if anything did.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
