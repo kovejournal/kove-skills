@@ -1,14 +1,14 @@
 {
   "name": "kove",
   "displayName": "Kove",
-  "version": "0.1.0",
-  "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days. Kove looks the food up and does the sums.",
+  "version": "1.0.0",
+  "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days, while Kove holds it all together.",
   "author": {
     "name": "Kove Journal",
     "email": "hello@kovejournal.com",
     "url": "https://kovejournal.com"
   },
-  "homepage": "https://kovejournal.com",
+  "homepage": "https://kovejournal.com/connect/",
   "repository": "https://github.com/kovejournal/kove-skills",
   "license": "Apache-2.0",
   "keywords": [

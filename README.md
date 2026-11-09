@@ -46,6 +46,7 @@ do: read your journal, or read and write. Kove emails you when an assistant is c
 in the app lists every connection with Disconnect.
 
 Use only this address, and sign in only on `app.kovejournal.com`. Kove never asks for your password in a chat.
+The steps for each app are in the [setup guide](https://kovejournal.com/connect/).
 
 ### Ask your assistant to do it
 
@@ -118,6 +119,8 @@ The skills are plain text. Nothing in this repository runs on your computer.
   them, and may be outside the EU. Whether they keep it or train on it depends on their terms and your settings.
 - You choose read or read and write when you connect, and you can disconnect at any time. A password reset
   disconnects every assistant.
+- Your assistant can ask for a full copy of your data. Nothing is sent until you approve it in the Kove app, each
+  time, and your pictures go only if you tick them.
 - Kove's [privacy policy](https://kovejournal.com/privacy/#assistant) and
   [terms](https://kovejournal.com/terms/) say what connecting an assistant means, in full.
 

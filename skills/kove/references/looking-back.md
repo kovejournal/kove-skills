@@ -9,6 +9,7 @@
 | An exact average, total, lowest, highest, or how many days | `summarize` |
 | Days whose note mentions something | `search_journal` |
 | Training | `get_workouts` |
+| Everything at once, for your own analysis | `export_all` (a zip they approve in Kove; see the main skill) |
 
 - **Figures come from `summarize`, not from your own arithmetic.** It reads every day exactly. `by` breaks a
   span down by week or month, and `compare_to` computes the same figure over a second span, side by side.

@@ -227,11 +227,14 @@ for (const [where, m] of manifests) if (m.license !== LICENSE_ID) fail(where, `l
 const notice = existsSync(join(ROOT, "NOTICE")) ? readFileSync(join(ROOT, "NOTICE"), "utf8") : "";
 if (!/Copyright \d{4}/.test(notice)) fail("NOTICE", "missing, or names no copyright holder");
 // Releases are published by a GitHub App that may change files but not workflows, so a workflow here would
-// fail the release; pull requests are checked by this script where they are applied.
-if (existsSync(join(ROOT, ".github", "workflows")))
+// fail the release; pull requests are checked by this script where they are applied. Files count, not the
+// folder: an emptied folder left behind (or a .DS_Store) publishes nothing.
+const workflowsDir = join(ROOT, ".github", "workflows");
+if (existsSync(workflowsDir) && walk(workflowsDir).some((f) => !f.endsWith(".DS_Store")))
   fail(".github/workflows", "a release cannot publish a workflow; this script checks pull requests where they are applied");
 const changelog = existsSync(join(ROOT, "CHANGELOG.md")) ? readFileSync(join(ROOT, "CHANGELOG.md"), "utf8") : "";
-if (agent?.version && !changelog.includes(`## ${agent.version}`)) fail("CHANGELOG.md", `no entry for ${agent.version}`);
+const versionHeading = agent?.version && new RegExp(`^## ${agent.version.replace(/[.+-]/g, "\\$&")}\\s*$`, "m");
+if (versionHeading && !versionHeading.test(changelog)) fail("CHANGELOG.md", `no entry for ${agent.version}`);
 
 if (problems.length) {
   console.error(`kove-skills: ${problems.length} problem(s)\n` + problems.map((p) => `  - ${p}`).join("\n"));

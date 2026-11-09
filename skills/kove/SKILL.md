@@ -111,11 +111,27 @@ act. Field names are theirs: use them exactly as written, in whatever language t
 - To say something is linked to something else in their days, test it first:
   [looking back](references/looking-back.md). Anything untested is said as a possibility, never a finding.
 
+## A full copy of their data
+
+When they want all their data, an export, or an analysis of their whole record that the read tools can't
+reasonably serve (years at once, their own scripts, something to keep), offer a full copy:
+
+1. Call `export_all` with no arguments. It answers with `approve_url`: ask them to open it and tap Allow in
+   Kove. Nothing is shared until they do, and pictures come only if they tick them there.
+2. Call `export_all` again with the `request_id`. Once `state` says ready, download `download_url` to a file
+   straight away, with a POST request (curl -X POST -o kove.zip followed by the link): it works once, within 15
+   minutes. Never show that link or paste it anywhere, since it is their whole record. Unzip it and read
+   README.txt first.
+3. If you can't fetch files (most chat apps can't), ask them to tap **Download it yourself** on the same page and
+   upload the zip to you.
+
+For an ordinary question, use the read tools ([looking back](references/looking-back.md)) instead.
+
 ## What stays in the Kove app
 
 Deleting a field, a saved food, a plan, a reminder, a quick-add button or an Insights card; renaming a field;
 editing a logged workout set; editing or removing what Kove remembers (`remember` only adds); pictures; the
-account, billing, export and sign-in. Say so plainly and offer the `open_in_kove` link of a related result, or
+account, billing and sign-in. Say so plainly and offer the `open_in_kove` link of a related result, or
 tell them where it is in the app.
 
 ## When Kove says no
