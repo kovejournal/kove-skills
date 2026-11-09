@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+- Sharper pictures in the README: Kove's cards were drawn at a third of their resolution. Nothing else changed.
+
 ## 1.0.1
 
 - A new README: the one message that connects Kove, the steps for each app (with one-click install for Cursor
