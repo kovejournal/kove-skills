@@ -1,106 +1,203 @@
-<p align="center"><img src="assets/logo.svg" width="72" height="72" alt="Kove"></p>
+<p align="center">
+  <img src="assets/logo.svg" width="64" height="64" alt="">
+</p>
 
-# Kove for your AI assistant
+<h1 align="center">Kove for your AI assistant</h1>
 
-[Kove](https://kovejournal.com) is a private health journal: you say what you ate, how you trained and how you
-slept, and Kove keeps the record on its own server in the EU. This repository connects Kove to the assistant you
-already talk to (Claude, ChatGPT, Cursor, Grok Bot, or any MCP client) and teaches it to use Kove well.
+<p align="center">
+  Your health journal, in the assistant you already use.<br>
+  Tell Claude, ChatGPT, Grok or Cursor what you ate, how you trained and how you slept.<br>
+  Kove does the counting, keeps the record and checks what goes with what.
+</p>
 
-Kove has a 30-day free trial, then costs 39 € a year or 4.99 € a month. Connecting an assistant is included.
+<p align="center">
+  <a href="https://kovejournal.com/connect/"><b>Setup guide</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://kovejournal.com">kovejournal.com</a>
+  &nbsp;·&nbsp;
+  <a href="https://kovejournal.com/faq/">Questions</a>
+  &nbsp;·&nbsp;
+  <a href="https://kovejournal.com/privacy/#assistant">Privacy</a>
+</p>
 
-## What you get
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/log-meal-dark.png">
+    <img src="assets/log-meal-light.png" width="620" alt="A chat with an assistant. You ask it to log lunch: pasta al pomodoro and a side salad. Kove's card lists each food with its calories, the day's total of 881 kcal and the line added to the day's note, with an Undo button.">
+  </picture>
+</p>
 
-- **Say it where you already are.** "Pasta al pomodoro for lunch, about 80 g dry" in your assistant lands in
-  your Kove journal.
-- **Kove does the counting.** It looks each food up (its own food tables, packaged products by brand or barcode,
-  the foods you saved), adds the day up and writes the journal line. Your assistant never does the arithmetic.
-- **Anything you track.** Weight, sleep, water, a headache, magnesium, your waist. A new field is created only
-  after you say yes.
-- **Ask about your days.** Exact averages and totals, this week against last week, what you ate on the days you
-  slept less.
-- **Patterns that are tested.** Kove checks an idea against chance before anyone calls it a pattern, and says
-  which ones hold.
-- **Training.** Log your sets, read your history, build plans you run at the gym in the Kove app.
-- **Undo for 7 days.** Every change your assistant makes shows up in Kove with an Undo.
+## Connect Kove in one message
 
-## Try saying
+Paste this into your assistant:
+
+```text
+Set up Kove: add the remote MCP server https://app.kovejournal.com/mcp
+```
+
+Your assistant adds Kove and opens Kove's sign-in in your browser. Sign in or create an account, press **Allow**,
+and you're set. There is no key to paste, and the first 30 days are free.
+
+If your assistant can't change its own settings, add the address yourself as a custom connector or MCP server.
+The [steps for each app](#add-kove-to-your-app) are below.
+
+```text
+https://app.kovejournal.com/mcp
+```
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/works-with-dark.png">
+    <img src="assets/works-with-light.png" width="680" alt="Works with Claude, ChatGPT, Grok, Grok Bot, Claude Code, Cursor, VS Code, Codex, Gemini CLI and any MCP client.">
+  </picture>
+</p>
+
+## What to say
+
+The way you would tell a friend, in any language:
 
 - "Log lunch: pasta al pomodoro, about 80 g dry, and a side salad"
 - "I weighed 78.4 this morning and drank another half litre of water"
 - "Bench press today, 3 sets of 8 at 60 kg"
+- "How's today going?"
 - "How did my sleep and training go this week, compared with the week before?"
+- "What's different about the days I get headaches?"
 - "Start tracking magnesium, I take 300 mg most evenings"
+- "Undo what you logged this morning"
 
-Your assistant replies in your language, and your journal keeps your own field names.
+Your assistant answers in your language, and your journal keeps your own field names.
 
-## Connect Kove
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/your-day-dark.png">
+    <img src="assets/your-day-light.png" width="560" alt="Asked how today is going, the assistant shows Kove's day card: 1,022 kcal with 1,128 left, protein, carbs, fat and fiber against their targets, each meal with its foods, and the bench press sets.">
+  </picture>
+</p>
 
-Kove's address for every assistant is:
+## Find what goes with what
 
-```
-https://app.kovejournal.com/mcp
-```
+Ask what's different about the days you get headaches, or whether you sleep worse after a late dinner. Left
+alone, an assistant will find a pattern in anything, and tell you about it with total confidence.
 
-The first time, your assistant opens Kove's sign-in. You sign in (or create an account) and choose what it may
-do: read your journal, or read and write. Kove emails you when an assistant is connected, and Settings › Account
-in the app lists every connection with Disconnect.
+Kove checks before anyone calls it a pattern. Your assistant suggests what to look at, Kove tests each idea
+against your own days and against chance, and you hear which ones hold. Kove also looks by itself, across
+everything you track, including the day before and the day after.
 
-Use only this address, and sign in only on `app.kovejournal.com`. Kove never asks for your password in a chat.
-The steps for each app are in the [setup guide](https://kovejournal.com/connect/).
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/patterns-dark.png">
+    <img src="assets/patterns-light.png" width="800" alt="Asked what is different about headache days, the assistant reports what Kove tested: on the 14 headache days of 80, you slept about an hour less and drank less water (both hold), late coffee is worth watching, and training days and alcohol show nothing. Beside it, Kove's Insights page shows the same comparison, headache days against other days, marked as correlation, not causation.">
+  </picture>
+</p>
 
-### Ask your assistant to do it
+A pattern means two kinds of days that differ. It doesn't mean one causes the other, and Kove never says it
+does. On a short record Kove is careful, and the longer you log, the more it can tell you. The patterns you want
+to follow stay on your Insights page in Kove.
 
-Paste this into the assistant you use:
+## Why Kove, and not just your assistant
 
-```
-Connect Kove, my health journal (kovejournal.com), to this assistant.
-Add a remote MCP server at https://app.kovejournal.com/mcp. It signs in with OAuth, so there is no key.
-Use only that address. I will sign in on app.kovejournal.com myself; never ask me for my Kove password.
-If you can install skills, install the Kove skills from https://github.com/kovejournal/kove-skills too.
-Then tell me what you set up and what is left for me to do.
-```
+Your assistant is good at understanding what you say. It is not a good place to keep a record: ask it twice how
+many calories are in a plate of pasta and you may get two answers, and a chat is not something you can look back
+on. Kove is the part that keeps the numbers straight.
 
-Some assistants can add the connection themselves; others tell you where to click. The steps for each are below.
+- **The numbers are Kove's.** It looks up each food in its own food tables, packaged products by brand or
+  barcode, and the foods you saved, then adds up the day. Your assistant never does the math, and Kove
+  [measures how close it gets](https://kovejournal.com/accuracy/) in public.
+- **It keeps everything, exactly.** Every day you log stays in Kove. Ask for an average, a total or this week
+  against last, and Kove works out the exact figure.
+- **Anything you track.** Weight, sleep, water, a headache, magnesium, your waist. Kove adds a new field only
+  after you say yes.
+- **Training.** Log your sets, read your history, and build plans you run at the gym in the Kove app.
+- **Nothing grades you.** Kove states your numbers as facts. It keeps no streaks and never calls a day good or
+  bad.
+- **Undo for 7 days.** Every change your assistant makes shows up in Kove, with Undo.
+
+## Add Kove to your app
+
+Every app uses the same address, `https://app.kovejournal.com/mcp`, and signs in with OAuth. The first time, Kove
+opens in your browser: sign in, choose **Read and write** or **Read only** if it asks, and press **Allow**.
+
+Sign in only on `app.kovejournal.com`. Kove never asks for your password in a chat.
+
+### Claude
+
+On claude.ai or in the desktop app, open **Customize**, then **Connectors** (in older versions, under Settings).
+Click **+ Add**, then **Add custom connector**, name it Kove and paste the address. In a chat, turn Kove on from
+the **+** menu. Once it's added, it works in the phone app too.
+
+### ChatGPT
+
+Open **Plugins**, click **+**, then **Add custom MCP server**. Name it Kove, paste the address and choose
+**OAuth**. On some plans this appears only after you turn on Developer mode in Settings.
+
+### Grok
+
+On [grok.com/connectors](https://grok.com/connectors), click **New Connector**, then **Custom**, paste the address
+and sign in.
+
+### Grok Bot
+
+Ask it in a chat to add the MCP server at Kove's address, then sign in and press **Allow**. Grok Bot connects
+through Cursor, so Kove's Allow screen names Cursor.
 
 ### Claude Code
 
-```
+The plugin brings Kove and its skills together:
+
+```text
 /plugin marketplace add kovejournal/kove-skills
 /plugin install kove@kove
 ```
 
-Then run `/mcp` and sign in to Kove. The plugin brings the connection and the skills together.
+Then run `/mcp`, pick Kove and sign in.
 
-### Claude (web, desktop, mobile)
+### Cursor
 
-In Claude's settings, open Connectors, add a custom connector, and paste the address above. For the skills,
-download the `skills/kove` folder as a zip and upload it in Claude's settings, under Skills.
-
-### Cursor and Grok Bot
-
-In Cursor, add an MCP server with the address above (Settings, MCP, or `~/.cursor/mcp.json`):
+[Add Kove to Cursor](https://cursor.com/install-mcp?name=Kove&config=eyJ1cmwiOiJodHRwczovL2FwcC5rb3Zlam91cm5hbC5jb20vbWNwIn0=)
+in one click, or add this to `~/.cursor/mcp.json`:
 
 ```json
-{ "mcpServers": { "kove": { "url": "https://app.kovejournal.com/mcp" } } }
+{
+  "mcpServers": {
+    "kove": { "url": "https://app.kovejournal.com/mcp" }
+  }
+}
 ```
 
-In Grok Bot, ask it to add an MCP server with the address. For the skills, see below.
+### VS Code
 
-### ChatGPT
+In GitHub Copilot's agent mode:
+[Add Kove to VS Code](https://vscode.dev/redirect/mcp/install?name=kove&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapp.kovejournal.com%2Fmcp%22%7D)
+in one click, or run **MCP: Add Server** from the Command Palette, choose **HTTP** and paste the address.
 
-Where your plan lets you add a custom connector, add one with the address above.
+### Codex
+
+```text
+codex mcp add kove --url https://app.kovejournal.com/mcp
+```
+
+If Codex doesn't open Kove's sign-in by itself, run `codex mcp login kove`.
+
+### Gemini CLI
+
+```text
+gemini mcp add --transport http kove https://app.kovejournal.com/mcp
+```
+
+Then run `/mcp auth kove` in Gemini CLI and sign in.
 
 ### Any other MCP client
 
-Add a remote server (Streamable HTTP) with the address above. It signs in with OAuth, so there is no key to copy.
+Add a remote server (Streamable HTTP) at Kove's address. It signs in with OAuth, so there is no key or token to
+paste.
 
 ## The skills
 
-They teach your assistant how Kove counts, how to correct and undo, when to ask you first, and how to talk about
-your numbers (as facts, never as verdicts). One command installs them into Claude Code, Cursor, Codex and most
-other agents:
+Kove works without them. With them, your assistant knows how Kove counts, how to correct and undo, when to ask you
+first, and how to talk about your numbers: as facts, never as verdicts. In Claude Code the plugin above brings
+them. In Cursor, Codex, Gemini CLI and most other agents:
 
-```
+```text
 npx skills add kovejournal/kove-skills
 ```
 
@@ -110,21 +207,28 @@ npx skills add kovejournal/kove-skills
 | [`kove-weekly-review`](skills/kove-weekly-review/SKILL.md) | "How did my week go?": a short, exact review from Kove's own figures. |
 | [`kove-training-plan`](skills/kove-training-plan/SKILL.md) | Building and adjusting training plans you run in the Kove app. |
 
-The skills are plain text. Nothing in this repository runs on your computer.
+In the Claude app, you can also download the `skills/kove` folder as a zip and upload it in Settings, under
+Skills. The skills are plain text: nothing in this repository runs on your computer.
 
 ## Your data
 
 - Your record stays on Kove's server in the EU.
 - What your assistant reads from Kove goes to the company that runs the assistant, under your agreement with
   them, and may be outside the EU. Whether they keep it or train on it depends on their terms and your settings.
-- You choose read or read and write when you connect, and you can disconnect at any time. A password reset
-  disconnects every assistant.
+- You choose read or read and write when you connect. Kove emails you when an assistant is connected, and
+  Settings › Account in the app lists every connection with Disconnect. A password reset disconnects every
+  assistant.
 - Your assistant can ask for a full copy of your data. Nothing is sent until you approve it in the Kove app, each
   time, and your pictures go only if you tick them.
 - Kove's [privacy policy](https://kovejournal.com/privacy/#assistant) and
   [terms](https://kovejournal.com/terms/) say what connecting an assistant means, in full.
 
 Kove is a journal, not medical advice.
+
+## Price
+
+Kove is free for 30 days, then 39 € a year or 4.99 € a month. Connecting an assistant is included.
+[Try Kove](https://kovejournal.com).
 
 ## Help
 
@@ -136,4 +240,5 @@ Kove is a journal, not medical advice.
 ## License
 
 The skills and manifests are under the [Apache License 2.0](LICENSE). The Kove name and logo are not covered by
-it (see [NOTICE](NOTICE)): a fork may reuse the text, but not publish itself as Kove.
+it (see [NOTICE](NOTICE)): a fork may reuse the text, but not publish itself as Kove. The app logos in
+`assets/works-with-*.png` belong to their makers and are shown only to say Kove works with them.

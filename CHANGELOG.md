@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1
+
+- A new README: the one message that connects Kove, the steps for each app (with one-click install for Cursor
+  and VS Code), pictures of Kove's cards in an assistant's chat, and how Kove checks a pattern before anyone
+  calls it one.
+- `assets/social-preview.png` for the repository's link preview.
+- The skills, the manifests and the MCP server are unchanged.
+
 ## 1.0.0
 
 The first public release.
