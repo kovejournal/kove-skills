@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kove",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days, while Kove holds it all together.",
   "author": {
     "name": "Kove Journal",

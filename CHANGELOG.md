@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.3
+
+- The README's pictures show each food's protein, carbs and fat under it, as Kove's cards now draw them, on the
+  same ramen lunch as kovejournal.com.
+- The ChatGPT steps state the plan rules: Business, Enterprise and Edu workspaces can add Kove with writing, Pro
+  can only read, and Plus, Go and the free plan cannot add one.
+- The skills and the MCP server are unchanged; the manifests change only their version.
+- The repository check now also reads the README's links and pictures and the MCP Registry entry
+  (`server.json`).
+
 ## 1.0.2
 
 - Sharper pictures in the README: Kove's cards were drawn at a third of their resolution. Nothing else changed.

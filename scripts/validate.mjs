@@ -67,30 +67,45 @@ function frontmatter(text, where) {
   }
   const meta = {};
   let parent = null;
+  // A value may be quoted ("…" or '…', which YAML allows), and the quotes are not part of it. A block scalar
+  // (`description: >` or `|`) is valid YAML that this small parser does not read, so it says so instead of
+  // checking the wrong text.
+  const value = (key, v) => {
+    if (/^[>|][-+]?$/.test(v)) {
+      fail(where, `"${key}" is written as a YAML block (${v}); write it on one line here`);
+      return "";
+    }
+    const q = /^(["'])(.*)\1$/.exec(v);
+    return q ? q[2] : v;
+  };
   for (const line of m[1].split("\n")) {
     if (!line.trim()) continue;
     const nested = /^ {2}([A-Za-z0-9_-]+):\s*(.*)$/.exec(line);
     const top = /^([A-Za-z0-9_-]+):\s*(.*)$/.exec(line);
-    if (nested && parent) meta[parent][nested[1]] = nested[2];
+    if (nested && parent) meta[parent][nested[1]] = value(`${parent}.${nested[1]}`, nested[2]);
     else if (top) {
       if (top[2] === "") {
         parent = top[1];
         meta[parent] = {};
       } else {
         parent = null;
-        meta[top[1]] = top[2];
+        meta[top[1]] = value(top[1], top[2]);
       }
     } else fail(where, `frontmatter line not understood: "${line}"`);
   }
   return { meta, body: text.slice(m[0].length) };
 }
 
-/** Relative markdown links in a file must resolve. External links and anchors are not checked. */
+/** Relative links and pictures in a file must resolve: markdown links and images, and the src and srcset of an
+ *  HTML <img> or <source> (the README's pictures). External links and anchors are not checked. */
 function checkLinks(file, text) {
-  for (const [, target] of text.matchAll(/\]\(([^)\s]+)\)/g)) {
-    if (/^(https?:|mailto:|#)/.test(target)) continue;
+  const targets = [...text.matchAll(/\]\(([^)\s]+)\)/g)].map((m) => m[1]);
+  for (const [, src] of text.matchAll(/\ssrc="([^"]+)"/g)) targets.push(src);
+  for (const [, set] of text.matchAll(/\ssrcset="([^"]+)"/g)) for (const part of set.split(",")) targets.push(part.trim().split(/\s+/)[0]);
+  for (const target of targets) {
+    if (!target || /^(https?:|mailto:|#|data:)/.test(target)) continue;
     const path = target.split("#")[0];
-    if (!path || path.startsWith("../../issues")) continue; // GitHub's own pages
+    if (!path) continue;
     if (!existsSync(join(dirname(file), path))) fail(rel(file), `link to "${target}" does not resolve`);
   }
 }
@@ -203,6 +218,25 @@ const servers = (file, json, type) => {
 if (agentMcp && agentMcp.$schema !== AGENT_MCP_SCHEMA) fail("mcp.json", `$schema must be ${AGENT_MCP_SCHEMA}`);
 const urls = new Set([...servers("mcp.json", agentMcp, "streamable-http"), ...servers(".mcp.json", claudeMcp, "http")]);
 if (urls.size > 1) fail("mcp.json, .mcp.json", "the two server files point at different addresses");
+
+// The MCP Registry's entry names the same address, or the Registry sends people somewhere the plugins do not.
+// Its version is the server's own and moves only when the server changes, so it is not compared with the plugins'.
+const registry = readJson("server.json");
+if (registry) {
+  if (!/^https:\/\/static\.modelcontextprotocol\.io\/schemas\/[^/]+\/server\.schema\.json$/.test(registry.$schema ?? ""))
+    fail("server.json", "$schema must be the MCP Registry's server schema");
+  if (!SEMVER.test(registry.version ?? "")) fail("server.json", `version "${registry.version}" is not semver`);
+  const remotes = registry.remotes ?? [];
+  if (remotes.length !== 1) fail("server.json", "must list exactly one remote");
+  for (const r of remotes) {
+    if (r.type !== "streamable-http") fail("server.json", 'the remote must have type "streamable-http"');
+    if (!urls.has(r.url)) fail("server.json", `the remote "${r.url}" is not the address mcp.json and .mcp.json give`);
+  }
+}
+
+// ── The documents at the top (the README's links and pictures) ─────────────────────────────────────────────
+
+for (const name of readdirSync(ROOT).filter((n) => n.endsWith(".md"))) checkLinks(join(ROOT, name), readFileSync(join(ROOT, name), "utf8"));
 
 // ── Every file ──────────────────────────────────────────────────────────────────────────────────────────────
 

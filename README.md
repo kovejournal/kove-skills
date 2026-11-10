@@ -23,7 +23,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/log-meal-dark.png">
-    <img src="assets/log-meal-light.png" width="620" alt="A chat with an assistant. You ask it to log lunch: pasta al pomodoro and a side salad. Kove's card lists each food with its calories, the day's total of 881 kcal and the line added to the day's note, with an Undo button.">
+    <img src="assets/log-meal-light.png" width="620" alt="A chat with an assistant. You tell it lunch was a shoyu ramen with chicken chashu and a soft egg. Kove's card lists each food with its calories, protein, carbs and fat, the day's total of 811 kcal and the line added to the day's note, with an Undo button.">
   </picture>
 </p>
 
@@ -56,7 +56,7 @@ https://app.kovejournal.com/mcp
 
 The way you would tell a friend, in any language:
 
-- "Log lunch: pasta al pomodoro, about 80 g dry, and a side salad"
+- "Lunch was a shoyu ramen with chicken chashu and a soft egg"
 - "I weighed 78.4 this morning and drank another half litre of water"
 - "Bench press today, 3 sets of 8 at 60 kg"
 - "How's today going?"
@@ -70,7 +70,7 @@ Your assistant answers in your language, and your journal keeps your own field n
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/your-day-dark.png">
-    <img src="assets/your-day-light.png" width="560" alt="Asked how today is going, the assistant shows Kove's day card: 1,022 kcal with 1,128 left, protein, carbs, fat and fiber against their targets, each meal with its foods, and the bench press sets.">
+    <img src="assets/your-day-light.png" width="560" alt="Asked how today is going, the assistant shows Kove's day card: 1,022 kcal with 1,128 left, protein, carbs, fat and fiber against their targets, each meal with its foods and their protein, carbs and fat, and the bench press sets.">
   </picture>
 </p>
 
@@ -127,8 +127,9 @@ the **+** menu. Once it's added, it works in the phone app too.
 
 ### ChatGPT
 
-Open **Plugins**, click **+**, then **Add custom MCP server**. Name it Kove, paste the address and choose
-**OAuth**. On some plans this appears only after you turn on Developer mode in Settings.
+On a Business, Enterprise or Edu workspace, open **Plugins** on chatgpt.com, click **+**, then **Add custom MCP
+server**. Name it Kove, paste the address as the Server URL, choose **OAuth**, then **I understand and want to
+continue** and **Create as a plugin**. On Pro a custom server can only read, and Plus, Go and the free plan can't add one.
 
 ### Grok
 
@@ -233,7 +234,7 @@ Kove is free for 30 days, then 39 € a year or 4.99 € a month. Connecting an 
 ## Help
 
 - Questions: hello@kovejournal.com, or the [FAQ](https://kovejournal.com/faq/).
-- A skill that leads your assistant wrong: [open an issue](../../issues).
+- A skill that leads your assistant wrong: [open an issue](https://github.com/kovejournal/kove-skills/issues).
 - Security: see [SECURITY.md](SECURITY.md).
 - Contributing: see [CONTRIBUTING.md](CONTRIBUTING.md).
 
