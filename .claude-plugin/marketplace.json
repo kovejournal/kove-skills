@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "Kove, your private health journal, for Claude Code.",
-    "version": "1.0.3"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "kove",
       "source": "./",
       "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days, while Kove holds it all together.",
-      "version": "1.0.3",
+      "version": "1.1.0",
       "author": {
         "name": "Kove Journal",
         "email": "hello@kovejournal.com",
@@ -28,6 +28,7 @@
         "journal",
         "nutrition",
         "calories",
+        "macros",
         "food-log",
         "training",
         "workouts",

@@ -59,6 +59,7 @@ The way you would tell a friend, in any language:
 - "Lunch was a shoyu ramen with chicken chashu and a soft egg"
 - "I weighed 78.4 this morning and drank another half litre of water"
 - "Bench press today, 3 sets of 8 at 60 kg"
+- "Save this recipe, it serves 4: 320 g ditalini, 400 g chickpeas, 2 tbsp olive oil"
 - "How's today going?"
 - "How did my sleep and training go this week, compared with the week before?"
 - "What's different about the days I get headaches?"
@@ -204,7 +205,7 @@ npx skills add kovejournal/kove-skills
 
 | Skill | What it is for |
 |---|---|
-| [`kove`](skills/kove/SKILL.md) | Everything day to day: logging food and anything else, workouts, corrections, undo, new fields, goals, reminders, looking back. |
+| [`kove`](skills/kove/SKILL.md) | Everything day to day: logging food and anything else, recipes, workouts, corrections, undo, new fields, goals, reminders, looking back. |
 | [`kove-weekly-review`](skills/kove-weekly-review/SKILL.md) | "How did my week go?": a short, exact review from Kove's own figures. |
 | [`kove-training-plan`](skills/kove-training-plan/SKILL.md) | Building and adjusting training plans you run in the Kove app. |
 

@@ -24,6 +24,11 @@ Tool names below are Kove's. Your host may show them with a prefix (for example 
 2. Use Kove's date for "today", "yesterday" and "last week", never your own clock: the person may be in another
    time zone, and a day in Kove starts at their midnight.
 3. Before you say anything about a specific day, or change it, read it with `get_day`.
+4. If the account block says `set_up: false`, they haven't told Kove their height, how active they are and their
+   training experience yet, so Kove can't estimate their targets. Ask once, and send all three with
+   `update_profile`.
+5. If the account block has a `trial`, tell them once, in one short sentence, when their trial ends (or that it
+   has ended), with its `subscribe` link.
 
 ## How Kove counts
 
@@ -138,8 +143,8 @@ tell them where it is in the app.
 
 - **No write tools**: the connection was allowed to read only, so `log_meal`, `find_patterns` and every other
   write are missing. They can connect again from this assistant and choose Read and write.
-- **Their trial has ended**: Kove reads but does not write. Tell them they can subscribe in the app (Settings,
-  Account); nothing they logged is lost.
+- **Their trial has ended**: Kove reads but does not write. Give them the subscribe link Kove's answer carries;
+  nothing they logged is lost.
 - **A limit**: 10 pattern searches a day (shared with the app), 10 new fields and 20 new exercises a day, 20
   lookups of new products by barcode an hour, 300 writes a day per connection. Say so and stop; do not retry
   in a loop.

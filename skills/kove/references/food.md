@@ -64,6 +64,41 @@ put calories or macros in `log_values`.
   `portion_name` ("pot", 150) make "one pot" loggable. To change one, send its `id`, its `name` (a different name
   renames it) and only the figures that change. Kove's own foods cannot be changed.
 
+## A recipe, ingredient by ingredient
+
+A recipe they share (pasted, from a post, from a link, or one you worked out together) is saved with its
+`ingredients`, not with figures: Kove looks each one up and counts the dish itself, the way it counts a meal.
+
+- Each ingredient is a `log_meal` food: its `name`, the recipe's `amount`, its `grams`, `state` when it changes
+  with cooking (a recipe weighs pasta, rice and dried legumes uncooked: `raw`), and your estimate for that amount.
+  One of their saved foods, or one of Kove's, goes in by its `ref` from `search_foods`.
+- `servings`: how many portions it makes. `cooked_weight`: the whole dish once cooked, in grams. Send your
+  estimate when nobody weighed it, with `cooked_weight_estimated: true`: Kove marks it, and weighing the dish once
+  makes every figure exact. Say so in a clause, never as a requirement.
+- `source_url`: the post or page it came from. Saving the same link again updates that recipe instead of making a
+  second one, which is what an automation saving recipes every week needs.
+- The method goes in `description`, as a short numbered list.
+- A portion then logs as ONE food, the dish, from `saved_foods` with `portions: 1`.
+- To change a recipe, read it with `get_food` (it lists the ingredients), change only what they asked, and send
+  the whole list back as you read it, with its `id`. Every ingredient you did not change keeps exactly what it
+  counted from, and Kove counts the dish again. A list with only the changed line is refused: it would drop the rest.
+
+```json save_food
+{
+  "name": "Pasta e ceci",
+  "servings": 4,
+  "cooked_weight": 1600,
+  "cooked_weight_estimated": true,
+  "source_url": "https://www.instagram.com/p/example/",
+  "description": "1. Fry the garlic in the oil.\n2. Add the chickpeas and the stock, cook 15 minutes.\n3. Add the pasta and cook it al dente.",
+  "ingredients": [
+    { "name": "ditalini", "amount": "320 g", "grams": 320, "state": "raw", "calories": 1150, "protein_g": 40, "carbs_g": 230, "fat_g": 5 },
+    { "name": "chickpeas", "amount": "2 cans, drained", "grams": 480, "state": "canned", "calories": 560, "protein_g": 33 },
+    { "name": "olive oil", "amount": "2 tbsp", "grams": 27, "calories": 240, "fat_g": 27 }
+  ]
+}
+```
+
 ## "The same as yesterday"
 
 Read that day with `get_day` and log the same foods with the amounts it recorded, sending its figures as your

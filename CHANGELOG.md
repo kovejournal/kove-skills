@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0
+
+- Recipes made of ingredients. `save_food` takes a recipe's `ingredients`, `servings` and `cooked_weight`
+  (and the link it came from): Kove looks every ingredient up and counts each portion, and saving the same link
+  again updates that recipe. `get_food` reads a recipe back with its ingredients, each with its figures and what
+  it counts from, so the list can be sent back to change one line. A list that would drop most of a recipe is
+  refused, with the way to send it whole.
+- The `kove` skill's food reference teaches it: when a recipe is a recipe, how to change one, and that the cooked
+  weight can be the assistant's estimate, marked as one.
+- The MCP Registry entry is unchanged: Kove's server is at the same address.
+
 ## 1.0.3
 
 - The README's pictures show each food's protein, carbs and fat under it, as Kove's cards now draw them, on the
