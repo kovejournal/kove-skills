@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.0
+
+- Supersets in plans. `save_plan` groups exercises into a superset with a shared `superset` letter (a coach's
+  A1/A2 or B1/B2 reads as its letter), done back to back with no rest between them and one rest after each round:
+  `rest_sec` on an exercise in a superset is that rest. `leave_superset` takes an exercise out, and
+  `circuit: true` runs the whole plan as one round after another. `get_plan` numbers each superset and states its
+  rest after each round.
+- The `kove-training-plan` skill and the `kove` skill's training reference teach it: when to use a superset, and
+  how to group exercises a plan already has without touching their targets.
+- The daily limit on new exercises is 40 (it was 20).
+- The MCP Registry entry is unchanged: Kove's server is at the same address.
+
 ## 1.1.0
 
 - Recipes made of ingredients. `save_food` takes a recipe's `ingredients`, `servings` and `cooked_weight`

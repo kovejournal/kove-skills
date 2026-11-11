@@ -145,7 +145,7 @@ tell them where it is in the app.
   write are missing. They can connect again from this assistant and choose Read and write.
 - **Their trial has ended**: Kove reads but does not write. Give them the subscribe link Kove's answer carries;
   nothing they logged is lost.
-- **A limit**: 10 pattern searches a day (shared with the app), 10 new fields and 20 new exercises a day, 20
+- **A limit**: 10 pattern searches a day (shared with the app), 10 new fields and 40 new exercises a day, 20
   lookups of new products by barcode an hour, 300 writes a day per connection. Say so and stop; do not retry
   in a loop.
 

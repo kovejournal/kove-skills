@@ -37,6 +37,8 @@ Save a lasting answer (an injury, the equipment they have) with `remember` once 
 - Lay the plan out in text first: one plan per session ("Push", "Pull", "Legs", or "Full body A" and "B"),
   each exercise with sets, reps, rest and a short note. Leave the weight out when you do not know their load:
   they choose it at the first session, and you can offer to add it to the plan afterwards.
+- Use a superset (two or more exercises back to back, rest after the round) when they ask for one or when time
+  is short, pairing movements that do not compete (a push with a pull). Mark it with a shared `superset` letter.
 - Keep a beginner's plan short and conservative. Keep what they already do well unless they ask to change it.
 - Wait for a yes.
 
@@ -52,6 +54,8 @@ Save a lasting answer (an injury, the equipment they have) with `remember` once 
 - `save_plan` with `plan` (its id or name): exercises sent are added or changed. Leaving one out never removes
   it; name it in `remove_exercises` to take it out.
 - Swapping one movement for another is a remove plus an add, in one call.
+- Putting exercises they already have into a superset: send each by name with the same `superset` letter, and
+  nothing else changes. `leave_superset` takes one out again.
 - Logged sets are never touched by a plan change.
 
 ## 6. Progression

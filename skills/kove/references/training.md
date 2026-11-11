@@ -42,6 +42,23 @@
 - Logged sets are never touched by a plan change.
 - When the load is unknown, leave the weight out: they choose it at the first session. Offer to add it to the
   plan afterwards.
+- **A superset** is two or more exercises done back to back, one set each with no rest between, then a rest,
+  round after round. Exercises sent with the same `superset` letter become one, in the order sent: write a
+  coach's B1/B2 as `"superset": "B"` on both. The letter only groups the exercises in that one call, so to add
+  an exercise to a superset the plan already has, also send one of its current exercises with the same letter.
+  On an exercise in a superset `rest_sec` is the rest after each round. `leave_superset` takes one out.
+- To group exercises the plan already has, send each by name with the same letter and nothing else: their
+  targets stay as they are. Read the plan first when the person says "like my sheet": the structure is often
+  in its description.
+- `circuit: true` runs the whole plan as one round after another, resting after each round. Turning a circuit
+  off is done in the app.
+
+```json save_plan
+{ "plan": "Pull", "exercises": [
+  { "name": "lat pulldown", "superset": "B" },
+  { "name": "barbell curl", "superset": "B", "rest_sec": 90 }
+] }
+```
 - Confirm a new plan or a change with the person before saving it.
 - In the Kove app a plan runs at the gym as a checklist with a rest timer. Sets ticked there and sets logged here
   land in the same record.
