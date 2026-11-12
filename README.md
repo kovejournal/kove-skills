@@ -203,6 +203,8 @@ them. In Cursor, Codex, Gemini CLI and most other agents:
 npx skills add kovejournal/kove-skills
 ```
 
+They are also listed on [skills.sh](https://skills.sh/kovejournal/kove-skills).
+
 | Skill | What it is for |
 |---|---|
 | [`kove`](skills/kove/SKILL.md) | Everything day to day: logging food and anything else, recipes, workouts, corrections, undo, new fields, goals, reminders, looking back. |

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.1
+
+- The README links the skills' page on skills.sh.
+- No skill changed, and the MCP Registry entry is unchanged.
+
 ## 1.2.0
 
 - Supersets in plans. `save_plan` groups exercises into a superset with a shared `superset` letter (a coach's
