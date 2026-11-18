@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "com.kovejournal/kove",
-  "title": "Kove",
-  "description": "Your private health journal: log meals, workouts and anything you track, and ask about your days.",
-  "version": "1.0.0",
+  "title": "Kove Journal",
+  "description": "Calorie, macro and workout tracker for Claude, ChatGPT and Grok. Your private health journal.",
+  "version": "1.0.1",
   "websiteUrl": "https://kovejournal.com/connect/",
   "repository": {
     "url": "https://github.com/kovejournal/kove-skills",

@@ -2,7 +2,7 @@
   <img src="assets/logo.svg" width="64" height="64" alt="">
 </p>
 
-<h1 align="center">Kove for your AI assistant</h1>
+<h1 align="center">Kove: calorie and workout tracking for your AI assistant</h1>
 
 <p align="center">
   Your health journal, in the assistant you already use.<br>

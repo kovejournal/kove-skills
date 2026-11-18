@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kove",
-  "version": "1.2.1",
-  "description": "Log meals, workouts and anything you track in Kove, your private health journal, from your AI assistant, and ask about your days, while Kove holds it all together.",
+  "version": "1.2.2",
+  "description": "Track calories, macros and workouts from your AI assistant: Kove looks each food up, adds up the day and keeps every day in your private health journal.",
   "author": {
     "name": "Kove Journal",
     "email": "hello@kovejournal.com",
@@ -16,6 +16,10 @@
     "journal",
     "nutrition",
     "calories",
+    "calorie-tracker",
+    "macro-tracker",
+    "food-diary",
+    "workout-tracker",
     "macros",
     "food-log",
     "training",

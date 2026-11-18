@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.2
+
+- The listings say what Kove tracks in the words people search for: calories, macros and workouts. The plugin
+  description, the README heading and the keywords changed, and no skill changed.
+- The MCP Registry entry moves to 1.0.1 with a new title (Kove Journal) and description. Kove's server is at the
+  same address.
+
 ## 1.2.1
 
 - The README links the skills' page on skills.sh.

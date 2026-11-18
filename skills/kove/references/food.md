@@ -62,7 +62,10 @@ put calories or macros in `log_values`.
 - **Saving a food** (`save_food`): only when they ask or agree ("save this as my usual breakfast"). Send the
   figures per 100 g by default, or the label's own amount with `per` and Kove rebases them. `portion_amount` and
   `portion_name` ("pot", 150) make "one pot" loggable. To change one, send its `id`, its `name` (a different name
-  renames it) and only the figures that change. Kove's own foods cannot be changed.
+  renames it) and only the figures that change. Kove's own foods keep Kove's figures and name, but their portion is
+  the person's: send its `id` with `portion_amount` (and `portion_name`) when they say how much one of it is.
+- The pack size a food shows is how much the package holds, never a portion: log the whole pack only when they had
+  all of it or it is one snack, drink or pot packed on its own.
 
 ## A recipe, ingredient by ingredient
 
