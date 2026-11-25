@@ -193,6 +193,8 @@ Then run `/mcp auth kove` in Gemini CLI and sign in.
 Add a remote server (Streamable HTTP) at Kove's address. It signs in with OAuth, so there is no key or token to
 paste.
 
+Kove is also listed on [Glama](https://glama.ai/mcp/connectors/com.kovejournal/kove).
+
 ## The skills
 
 Kove works without them. With them, your assistant knows how Kove counts, how to correct and undo, when to ask you

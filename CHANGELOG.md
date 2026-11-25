@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.3
+
+- The README links Kove's listing on Glama.
+- No skill changed, and the MCP Registry entry is unchanged.
+
 ## 1.2.2
 
 - The listings say what Kove tracks in the words people search for: calories, macros and workouts. The plugin

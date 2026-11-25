@@ -1,7 +1,7 @@
 {
   "name": "kove",
   "description": "Track calories, macros and workouts from your AI assistant: Kove looks each food up, adds up the day and keeps every day in your private health journal.",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": {
     "name": "Kove Journal",
     "email": "hello@kovejournal.com"
